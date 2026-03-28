@@ -12,7 +12,14 @@ from launch.actions import DeclareLaunchArgument, TimerAction, LogInfo
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 import os
-
+import subprocess
+os.environ['CYCLONEDDS_URI'] = f"file://{os.path.expanduser('~')}/cyclone_config.xml"
+os.environ['RMW_IMPLEMENTATION'] = 'rmw_cyclonedds_cpp'
+# Source workspace for custom messages
+os.environ['AMENT_PREFIX_PATH'] = \
+    f"/home/sanjay/ros2_px/install/drone_mission:" \
+    f"/home/sanjay/ros2_px/install/drone_mission_msgs:" \
+    f"{os.environ.get('AMENT_PREFIX_PATH', '')}"
 
 def generate_launch_description():
 
