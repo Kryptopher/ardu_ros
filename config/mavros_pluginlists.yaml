@@ -1,0 +1,20 @@
+/**:
+  ros__parameters:
+    # Allowlist approach — only load what we actually need
+    # This replaces the default denylist approach
+    plugin_allowlist:
+      - sys_status
+      - sys_time
+      - imu
+      - local_position
+      - global_position
+      - rc
+      - battery
+      - setpoint_raw
+      - vfr_hud
+      - nav_controller_output
+      - wind_estimation
+      - estimator_status
+      - command
+      - param
+      - waypoint

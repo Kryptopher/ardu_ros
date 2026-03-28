@@ -1,0 +1,5 @@
+t,type,mode,profile,frame,x,y,z,vx,vy,vz,ax,notes
+0.00,manual_takeoff,,,,,0,0,0,0,0,0,0,manual takeoff
+10.00,cmd,pos,hold,ned,0,0,0,0,0,0,0,hover at home
+20.00,cmd,traj,circle,ned,0,0,0,5,0,20,0,r=5m period=20s
+80.00,end,,,,,,,,,,,, 
